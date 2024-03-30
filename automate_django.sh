@@ -6,8 +6,20 @@ create_django_project() {
     app_name="$2"
 
     # Create virtual environment
-    python3 -m venv venv
-    source venv/bin/activate
+    mkdir "$project_name"
+    cd "$project_name" || exit
+    pip install virtualenv
+    virtualenv venv
+
+    # Activate virtual environment based on operating system
+    if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+        source venv/bin/activate
+    elif [[ "$OSTYPE" == "msys" ]]; then
+        source venv/Scripts/activate
+    else
+        echo "Unsupported operating system. Please activate the virtual environment manually."
+        exit 1
+    fi
 
     # Install Django
     pip install django
