@@ -1,4 +1,4 @@
-# Django Project with Custom User Model
+# Django Project with Custom User Model - By Bash Script
 
 This is a Django project created with a custom User model using a Bash script. The script automates the process of creating a Django project with a core app containing a custom User model.
 
