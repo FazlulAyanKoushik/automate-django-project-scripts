@@ -12,7 +12,7 @@ This is a Django project created with a custom User model using a Bash script. T
 1. Clone this repository:
 
     ```bash
-    git clone <repository_url>
+    git clone git@github.com:FazlulAyanKoushik/automate-django-project-scripts.git
     ```
 
 2. Navigate to the directory where the script is located.
